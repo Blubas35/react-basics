@@ -1,0 +1,25 @@
+.program-filter-form {
+    background-color: white;
+    padding: 45px 40px 40px;
+    position: sticky;
+    top: 20px;
+}
+
+.form-control:not(.checkbox) {
+    display: flex;
+    flex-direction: column;
+}
+
+.program-filter-form button {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border-radius: 50px;
+    padding: 6px;
+    cursor: pointer;
+}
+.program-filter-form button:hover {
+    background-color: blue;
+    color: white;
+  }
+

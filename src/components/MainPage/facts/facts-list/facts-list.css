@@ -1,0 +1,7 @@
+ul.facts-list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }

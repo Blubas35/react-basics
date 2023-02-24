@@ -1,0 +1,41 @@
+.events .events-wrapper .event {
+    background-color: black;
+    color: white;
+}
+
+.events .events-wrapper .event a {
+    text-decoration: none;
+    color: white;
+}
+
+.events .events-wrapper .event .event-info {
+    padding: 50px 20px 20px;
+    position: relative;
+}
+
+.events .events-wrapper .event .event-info .event-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.events .events-wrapper .event .event-info .date {
+    text-align: center;
+    width: 62px;
+    border-radius: 10px 5px;
+    overflow: hidden;
+    position: absolute;
+    top: -40px;
+}
+
+.events .events-wrapper .event .event-info .date .day {
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    padding: 10px 5px;
+}
+
+.events .events-wrapper .event .event-info .date .month {
+    background: #ff00e9;
+    text-transform: uppercase;
+    padding: 5px;
+}

@@ -1,0 +1,25 @@
+.main-news {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 920px) {
+    .main-content {
+        width: calc(70% - 30px);
+    }
+}
+
+
+@media (max-width: 799px) {
+    .main-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 300px) {
+    .main-news {
+        display: block;
+    }
+}

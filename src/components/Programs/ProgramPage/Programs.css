@@ -1,0 +1,25 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.menu-item a {
+    box-shadow: none;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.program-wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 2fr;
+}

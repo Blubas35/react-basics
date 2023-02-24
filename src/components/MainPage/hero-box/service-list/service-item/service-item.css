@@ -1,0 +1,14 @@
+.service-item {
+    margin-bottom: 74px;
+    width: 50%;
+  }
+  .service-item:last-child {
+    padding-left: 115px;
+    border-left: 1px solid white;
+  }
+  .service-item:first-child {
+    padding-right: 115px;
+  }
+  .service-item p {
+    margin: 0;
+  }

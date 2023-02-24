@@ -1,0 +1,24 @@
+
+.bg-image {
+    display: flex;
+    text-decoration: none;
+    background-image: url(./banner.jpg);
+    font-size: 30px;
+    padding: 30px;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 90% 70%;
+    background-color: white;
+}
+
+.pink-color {
+    color: #ff00e9;
+}
+
+.black-color {
+    color: black;
+}
+
+.page-title-wrapper {
+    margin-bottom: 30px;
+}

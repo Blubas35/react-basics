@@ -1,0 +1,9 @@
+.podcasts {
+    margin-bottom: 60px;
+}
+
+.podcasts-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}

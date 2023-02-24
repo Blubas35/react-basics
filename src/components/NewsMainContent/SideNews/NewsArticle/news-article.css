@@ -1,0 +1,13 @@
+.secondary-news .news-article a {
+    display: flex;
+}
+
+.secondary-news .news-article .image-wrapper {
+    width: 120px;
+    height: 80px;
+}
+
+.secondary-news .news-article .info-wrapper {
+    width: calc(100% - 120px);
+    margin-left: 20px;
+}

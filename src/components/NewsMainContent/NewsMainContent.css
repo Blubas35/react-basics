@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+
+.container {
+    max-width: 1430px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a.button-title {
+    background-color: white;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 30px 40px;
+    border-radius: 8px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    column-gap: 30px;
+}
+
+.main-content {
+    width: 70%;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.news {
+    margin-bottom: 60px;
+}
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid;
+    display: grid; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+.menu-item a {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    background-color: white;
+    box-shadow: 0 7px 15px 0 rgb(0 0 0 / 7%);
+    padding: 17px 20px;
+}
+
+
+@media (min-width: 300px) {
+    .content-wrapper {
+        display: block;
+
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .menu-list {
+        padding: 0;
+        display: flex;
+    }
+    .menu-item a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 799px) {
+    .content-wrapper {
+        display: block;
+    }
+    .main-content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 920px) {
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-content {
+        width: calc(70% - 30px);
+    }
+
+    .menu-item {
+        width: auto;
+    }
+
+    .menu-list {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-item a {
+        width: auto;
+        display: flex;
+        text-align: center;
+        font-size: 15px;
+    }
+}

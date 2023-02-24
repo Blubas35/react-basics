@@ -1,0 +1,9 @@
+.hero-box {
+    background-color: black;
+    color: white;
+    padding-top: 170px;
+  }
+  .hero-box-content {
+    margin-left: 100px;
+    margin-right: 100px;
+  }

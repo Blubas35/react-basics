@@ -1,0 +1,13 @@
+.secondary-news {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 920px) {
+    .sidebar-content {
+        width: 30%;
+    }
+}
+
