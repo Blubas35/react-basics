@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container">
         <div className="header-wrapper">
           <div className="image-wrapper">
-            <Link to='/'>
+            <Link to='/codeacademy'>
               <img className="logo" src="https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-black.svg" alt="CodeAcademy logo" />
             </Link>
 
@@ -16,28 +16,28 @@ export default function Header() {
           <nav className="main-navigation">
             <ul className="main-menu">
               <li className="menu-item">
-                <a className="menu-link" href="#">Studentams</a>
+                <a className="menu-link" href="./#">Studentams</a>
               </li>
               <li className="menu-item">
-                <a className="menu-link" href="#">Verslui</a>
+                <a className="menu-link" href="./#">Verslui</a>
               </li>
               <li className="menu-item">
-                <Link className="menu-link" to="/programs">Programos</Link>
+                <Link className="menu-link" to="/codeacademy/programs">Programos</Link>
               </li>
               <li className="menu-item">
-                <a className="menu-link" href="#">Apie mus</a>
+                <a className="menu-link" href="./#">Apie mus</a>
               </li>
               <li className="menu-item">
-                <Link className="menu-link" to="/news">Naujienos</Link>
+                <Link className="menu-link" to="/codeacademy/news">Naujienos</Link>
               </li>
               <li className="menu-item">
-                <a className="menu-link" href="#">IT testaas</a>
+                <a className="menu-link" href="./#">IT testaas</a>
               </li>
               <li className="menu-item">
-                <a className="menu-link" href="#">Kontaktai</a>
+                <a className="menu-link" href="./#">Kontaktai</a>
               </li>
               <li className="menu-item">
-                <a className="menu-link" href="#">EN</a>
+                <a className="menu-link" href="./#">EN</a>
               </li>
             </ul>
             <a className="button" href="tel:+37045646444">Skambinti</a>

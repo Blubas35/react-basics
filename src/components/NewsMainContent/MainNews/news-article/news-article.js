@@ -1,7 +1,10 @@
 import './news-article.css'
 
-export default function NewsArticle (props, date) {
-    if (!props.title) {
+export default function NewsArticle (props) {
+    
+    let { image, category, title, date } = props.article
+    
+    if (!title) {
         return
     }
     return (
@@ -9,13 +12,13 @@ export default function NewsArticle (props, date) {
         <a href="./#">
             <div className="image-wrapper">
                 <img
-                    src="https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg"/>
+                    src={image} alt='news-photo'/>
             </div>
 
             <div className="info-wrapper">
-                <span className="article-category">Naujienos</span>
-                <h2 className="article-title">{props.title}</h2>
-                <span className="article-date">{props.date}</span>
+                <span className="article-category">{category}</span>
+                <h2 className="article-title">{title}</h2>
+                <span className="article-date">{date}</span>
             </div>
         </a>
     </article>

@@ -8,7 +8,7 @@ export default function MainContent() {
   return (
     <>
     <Header> </Header>
-    <main className="main-content">
+    <main className="main-page-content">
       <HeroBox></HeroBox>
       <Facts></Facts>
     </main>

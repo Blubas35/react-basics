@@ -1,0 +1,25 @@
+.shops-wrapper {
+    width: 50%;
+}
+
+@media screen and (max-width: 599px){
+    .shops-wrapper {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 799px) and (min-width: 600px) {
+    .shops-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+    .shops-wrapper {
+        width: calc((100% - 30px) / 2);
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 1010px) {
+    .shops-wrapper {
+        width: calc(50% - 30px);
+    }
+}

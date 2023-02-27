@@ -1,4 +1,3 @@
-import logo from '../podcast/podcast-iamge.jpg'
 import './podcast.css'
 
 export default function Podcast(props) {
@@ -15,7 +14,7 @@ export default function Podcast(props) {
     return (
         <div className="podcast">
             <div className="podcast-controls">
-                <img className="podcast-image" src={logo} alt="image" />
+                <img className="podcast-image" src={image} alt="podcast-logo" />
                 <span className="podcast-time">{timeText}</span>
                 <button className="podcast-play">Play</button>
             </div>

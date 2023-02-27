@@ -6,6 +6,9 @@ p {
   line-height: 1.74;
 }
 
+main .main-page-content {
+  width: 100%;
+}
 .container {
   max-width: 1230px;
   margin-left: auto;

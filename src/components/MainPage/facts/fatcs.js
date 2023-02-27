@@ -1,6 +1,5 @@
 import FactsList from "./facts-list/facts-list"
 import './facts.css'
-import H2Title from "../../Partials/h2Title"
 import Paragraph from "../../Partials/paragraph"
 
 export default function Facts() {
