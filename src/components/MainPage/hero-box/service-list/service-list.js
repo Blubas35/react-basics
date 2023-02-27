@@ -9,18 +9,6 @@ export default function ServiceList(props) {
     return (
         <div className="service-list">
             {serviceItemElements}
-           {/* <ServiceItem 
-           title ='Studentams'
-           ptext = 'Ar žengi pirmą ar kažkelintą žingsnį link tech išsilavinimo – mes tau padėsim!'
-           ptext2 ='antras praragrasfasf'
-           >
-           </ServiceItem>
-            <ServiceItem
-            title ='nestudentams'
-            ptext = 'naujas tekstas'
-            ptext2 = 'antras paragrafas'
-
-            ></ServiceItem> */}
         </div>
     )
 }

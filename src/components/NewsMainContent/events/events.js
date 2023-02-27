@@ -3,32 +3,8 @@ import './events.css'
 import LargeButton from "../../Partials/LargeButton"
 import H2Title from "../../Partials/h2Title"
 
-export default function EventsWrapper() {
-
-    const eventsData = [
-        {
-            image: 'https://codeacademy.lt/wp-content/uploads/2022/10/MicrosoftTeams-image-20-300x300.png',
-            day: 10,
-            month: 'lap',
-            location: 'Online',
-            title: 'CodeAcademy Talents',
-            url: './#'
-        },
-        {
-            day: 5,
-            month: 'lap',
-            location: 'Online',
-            title: 'CodeAcademy Talents',
-            url: './#'
-        },
-        {
-            day: 18,
-            month: 'lap',
-            location: 'Online',
-            title: 'CodeAcademy Talents',
-            url: './#'
-        },
-    ]
+export default function EventsWrapper(props) {
+    const eventsData = props.info
     const eventElements = eventsData.map((event, index) => <EventWrapper 
     event={event} key={index}/>)
 

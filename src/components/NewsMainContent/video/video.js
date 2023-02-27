@@ -1,15 +1,19 @@
 import './video.css'
 import LargeButton from '../../Partials/LargeButton'
 import SectionTitle from '../../Partials/SectionTitle'
-import H3Title from '../../Partials/h3Title'
 
+export default function VideoWrapper (props) {
+    let { sectionTitle, h3Title, buttonText } = props
+    props.info.map(prop => {
+        sectionTitle = prop.sectionTitle
+        h3Title = prop.h3Title
+        buttonText = prop.buttonText
+    })
 
-
-export default function VideoWrapper () {
     return (
         <section className="video">
 
-        <SectionTitle text='Vaizdo įrašai'></SectionTitle>
+        <SectionTitle text={sectionTitle}></SectionTitle>
 
         <div className="video-wrapper">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/b8dGCsP75HA"
@@ -18,10 +22,10 @@ export default function VideoWrapper () {
                 allowFullScreen></iframe>
         </div>
 
-        <H3Title text='Jei galiu aš - gali ir tu!'></H3Title>
+        <h3 className="sub-title">{h3Title}</h3>
 
 
-        <LargeButton text='Visi vaizdo įrašai'></LargeButton>
+        <LargeButton text={buttonText}></LargeButton>
     </section>
     )
 }

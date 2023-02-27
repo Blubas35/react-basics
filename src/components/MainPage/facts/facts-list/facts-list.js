@@ -1,24 +1,18 @@
 import FactItem from "./fact/fact"
 import './facts-list.css'
 
-export default function FactsList() {
+export default function FactsList(props) {
+    const factItemElement = props.info.map((prop, index) => {
+       return <FactItem
+        value= {prop.value}
+        text= {prop.text}
+        key={index}
+        />
+    }
+    )
     return (
         <ul className="facts-list">
-            <FactItem 
-            value='1298'
-            text ='Šiuo metu mokosi studentų'
-            ></FactItem>
-            <FactItem 
-            value='4762'
-            text ='Viso baigė studentų'
-            ></FactItem>
-            <FactItem 
-            value='80%'
-            text ='Baigę Pažengusių studijas įsidarbino'></FactItem>
-            <FactItem 
-            value='Front-End'
-            text ='Populiariausia programa'
-            ></FactItem>
+            {factItemElement}
         </ul>
     )
 }

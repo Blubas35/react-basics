@@ -1,7 +1,7 @@
 import './podcast.css'
 
 export default function Podcast(props) {
-
+    console.log(props)
     let { time, title, date, image } = props
     
     if(!title) {

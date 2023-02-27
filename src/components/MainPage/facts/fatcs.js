@@ -2,19 +2,27 @@ import FactsList from "./facts-list/facts-list"
 import './facts.css'
 import Paragraph from "../../Partials/paragraph"
 
-export default function Facts() {
+export default function Facts(props) {
+  const factsListData = props.factsList
+  let factsHeader = ''
+  let factsText1 = ''
+  let factsText2 = ''
+  props.factsHeader.map(prop => {
+    factsHeader = prop.title
+    factsText1 = prop.text1
+    factsText2 = prop.text2
+  })
     return (
         <section className="facts">
         <div className="container">
-          <h2 className="facts-header">CodeAcademy pulsas</h2>
-          {/* <H2Title text='CodeAcademy pulsas'></H2Title> */}
+          <h2 className="facts-header">{factsHeader}</h2>
           <div className="facts-wrapper">
             <div className="facts-description">
-              <Paragraph text='Manome, jog technologinis išsilavinimas privalo sekti šiandienos ir rytojaus darbo rinkos tendencijas bei būti prieinamas kiekvienam. 🙌'></Paragraph>
-              <Paragraph text='Šiuo principu vadovaudamiesi, kas dieną savo studentams atveriame naujas galimybes. 🔝'></Paragraph>
+              <Paragraph text={factsText1}></Paragraph>
+              <Paragraph text={factsText2}></Paragraph>
             </div>
             <div className="facts-list-wrapper">
-              <FactsList></FactsList>
+              <FactsList info={factsListData}></FactsList>
             </div>
           </div>
         </div>
