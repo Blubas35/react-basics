@@ -1,9 +1,12 @@
 import './container.css'
 
 
-export default function Container(props) {
-    let classes = 'container ' + props.className
+export default function Container({ className, children }) {
+    if(!className) {
+        return  <div className='container'>{children}</div>
+    }
+    let classes = 'container ' + className
     return (
-        <div className={classes}>{props.children}</div>
+        <div className={classes}>{children}</div>
     )
 }
