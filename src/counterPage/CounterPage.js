@@ -4,60 +4,76 @@ import './CounterPage.css'
 import Container from "../components/container/container"
 
 const Counter = () => {
-    // nereikia selectinti is naujo
-
-    // const buttonElement = document.querySelector('button')
-    // buttonElement.addEventListener('click', () => {
-
-    // })
-
-    // prideti classe <4 red >6zalia
-    // sutrumpinti apjungti funkcijas
-
     const initialCount = 5
-
-    // const [isActive, setActive] = useState()
     const [count, setCount] = useState(initialCount)
+    const [grades, setGrades] = useState([])
 
+    const changeCountHandler = (amount) => setCount(prevState => prevState + amount)
 
-    const changeCount = (amount) => {
-        let newCount = count + amount
-        setCount(newCount)
-
-        // if(newCount < 5) {
-        //     setActive(false)
-        // }
-        // if(newCount > 5) {
-        //     setActive(true)
-        // }
-    }
     let classes = ''
-    if ( count > 5) {
+
+    if (count > 5) {
         classes = 'green'
     }
     if (count < 5) {
         classes = 'red'
     }
-    // let classes = count > 4 ? 'green' : 'red' 
 
-    const buttonDisabler = (disable) => {
-        if (disable) {
-            return true
-        } else {
-            return null
+    const inputElementHandler = (event) => {
+        let newValue = parseInt(event.target.value)
+        setCount(newValue)
+        if (newValue > 10) {
+            setCount(10)
+        } else if (newValue < 0) {
+            setCount(0)
         }
     }
 
+    const addGradeHandler = () => {
+        const gradeData = {
+            id: Math.random(),
+            number: count,
+        }
+
+        setGrades(prevState => [gradeData, ...prevState])
+        setCount(initialCount)
+    }
+    // const removeElement = (indexToDelete) => {
+    //     setSaveCount((prevNumber) => prevNumber.filter((count, index) => index != indexToDelete))
+    // } infinite loop
+    const removeElement = (id) => setGrades(prevState => prevState.filter(grade => grade.id !== id))
+
     return (
         <Container>
-            <h1 className={classes} >{count}</h1>
-            {/* <h1 className={isActive ? 'green' : 'red'} >{count}</h1> */}
-            <button onClick={() => changeCount(+1)} disabled={count > 9 ? true : null}
+            <h1 className={classes}>{count}</h1>
+            <input
+                min={1}
+                max={10}
+                onChange={inputElementHandler}
+                // onChange={(event) => inputElementHandler(event)} nebutina naudoti event
+                value={count}
+                type="number"
+            />
+            <button onClick={() => changeCountHandler(1)} disabled={count > 9}
             >+1</button>
-            <button onClick={() => changeCount(-1)} disabled={count < 1 ? true : null}>-1</button>
-            <button onClick={() => changeCount(+2)} disabled={count > 8 ? true : null}>+2</button>
-            <button onClick={() => changeCount(-2)} disabled={count < 2 ? true : null}>-2</button>
+            <button onClick={() => changeCountHandler(-1)} disabled={count < 1}>-1</button>
+            <button onClick={() => changeCountHandler(2)} disabled={count > 8}>+2</button>
+            <button onClick={() => changeCountHandler(-2)} disabled={count < 2}>-2</button>
             <button onClick={() => setCount(initialCount)}>Reset</button>
+            <button onClick={() => addGradeHandler()}>Save</button>
+
+            {grades && grades.length > 0 &&
+                <div className="numbers-wrapper">
+                    <h2>Saved Numbers: </h2>
+                    <ul>
+                        {grades.map((grade) =>
+                            <li key={grade.id}>
+                                {grade.number}
+                                <button onClick={() => removeElement(grade.id)} >x</button>
+                            </li>)}
+                    </ul>
+                </div>
+            }
         </Container>
     )
 }
