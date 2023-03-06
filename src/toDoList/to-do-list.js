@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Container from '../components/container/container'
 import GenerateForm from './components/form'
-import TaskList from './TaskList'
+import TaskItem from './TaskItem'
 import './to-do-list.css'
 
 const ToDoList = () => {
@@ -31,7 +31,7 @@ const ToDoList = () => {
         }
         setToDoList((prevState => [...prevState, newTask]))
         setInput('')
-        event.target.reset()
+        setDescriptionInput('')
     }
 
     const inputHandler = (event) => {
@@ -67,17 +67,12 @@ const ToDoList = () => {
                 descriptionValue={descriptionInput}
             ></GenerateForm>
 
-            <div className='result-wrapper'>
-                <ul>
-                    {toDoList.map((task) =>
-                        <TaskList
-                            key={task.id}
-                            data={task}
-                            onDeleteTask={deleteHandler}
-                            onTaskDone={doneHandler}
-                        ></TaskList>)}
-                </ul>
-            </div>
+
+            <TaskItem
+                data={toDoList}
+                onDeleteTask={deleteHandler}
+                onTaskDone={doneHandler}
+            ></TaskItem>
         </Container>
     )
 }

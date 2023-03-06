@@ -109,13 +109,26 @@
 //         </Container>
 //     )
 // }
-export default function ShoppingItem( {data, onDelete, onTaskDone}) {
+export default function ShoppingItem({ data, onDelete, onTaskDone }) {
     return (
-        <li
-            key={data.id}>
-            <input onChange={() => onTaskDone(data.id)} type='checkbox'></input>
-            <span className={data.done ? 'done' : ''}>{data.title}</span>
-            <button onClick={() => onDelete(data.id)}>Delete</button>
-        </li>)
+        <div className="shopping-list-wrapper">
+            {data && data.length > 0 ? (
+                <>
+                    <h2> yra..</h2>
+                    <ul>
+                        {data.map((item) =>
+                            <li
+                                key={item.id}>
+                                <input onChange={() => onTaskDone(item.id)} type='checkbox'></input>
+                                <span className={item.done ? 'done' : ''}>{item.title}</span>
+                                <button onClick={() => onDelete(item.id)}>Delete</button>
+                            </li>)}
+                    </ul>
+                </>
+            ) : (
+            <h2> No shopping items...</h2>
+            )}
+        </div>
+    )
 }
 

@@ -45,29 +45,17 @@ export default function GetShoppingList() {
     return (
         <Container>
             <GenerateForm
-            onFormSubmit={submitHandler}
-            item={input}
-            onItemChange={inputHandler}
+                onFormSubmit={submitHandler}
+                item={input}
+                onItemChange={inputHandler}
             ></GenerateForm>
 
-            <div className="shopping-list-wrapper">
-                {shoppingList && shoppingList.length > 0 ? (
-                    <>
-                        <h2> yra..</h2>
-                        <ul>
-                            {shoppingList.map((item) =>
-                                <ShoppingItem
-                                    key={item.id}
-                                    data={item}
-                                    onTaskDone={doneHandler}
-                                    onDelete={deleteHandler}
-                                ></ShoppingItem>)}
-                        </ul>
-                    </>
-            ) : (
-            <h2> No shopping items...</h2>
-                )}
-        </div>
+            <ShoppingItem
+                data={shoppingList}
+                onTaskDone={doneHandler}
+                onDelete={deleteHandler}
+            ></ShoppingItem>
+
         </Container >
     )
 }
