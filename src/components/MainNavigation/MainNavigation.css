@@ -1,0 +1,21 @@
+.main-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.main-navigation a.active {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.main-navigation a:hover {
+    color: blue
+}

@@ -191,10 +191,8 @@ export default function CarForm() {
 
     return (
         <Container>
-            <GetForm
-                onSubmit={submitHandler}
-                title='Create Your Car!'
-            >
+            <form onSubmit={submitHandler}  >
+                <h1>Create Your Car!</h1>
                 <GetBrand
                     onChange={handleBrand}
                     data={brand}
@@ -235,8 +233,7 @@ export default function CarForm() {
 
                 {brand && model && engineType && baseCost && kilometers && color &&
                     (<input type="submit" value='Submit' ></input>)}
-            </GetForm>
-
+            </form>
             {createdCar && (
                 <GenerateCar data={createdCar}></GenerateCar>
             )}
