@@ -28,6 +28,15 @@ const MainNavigation = () => {
                 <li>
                     <NavLink to='/other-projects/bored-api'>Bored Api Page</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/other-projects/bitcoin-api'>Bitcoin Api Page</NavLink>
+                </li>
+                <li>
+                    <NavLink to='/other-projects/boredOther-api'>Bored Other Api Page</NavLink>
+                </li>
+                <li>
+                    <NavLink to='/other-projects/genderize-api'>Genderize Api Page</NavLink>
+                </li>
             </ul>
         </Container>
     )

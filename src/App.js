@@ -10,7 +10,10 @@ import ToDoList from './toDoList/to-do-list';
 import StudentForm from './studentForm/StudentForm';
 import MainNavigation from './components/MainNavigation/MainNavigation';
 import ChuckNorrisPage from './ChuckNorrisPage/ChuckNorrisPage';
-import RandomApi from './RandomApi/RandomApi';
+import RandomApi from './RandomApi/BoredApi';
+import BitcoinApi from './BitCoinApi/BitcoinApi';
+import RandomApiOther from './RandomApi/RandomApiOther/RandomApiOther';
+import GenderizeApi from './GenderizeApi/GenderizeApi';
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
         <Route path='/other-projects/student-form' element={<StudentForm></StudentForm>}></Route>
         <Route path='/other-projects/chuck-norris-page' element={<ChuckNorrisPage></ChuckNorrisPage>}></Route>
         <Route path='/other-projects/bored-api' element={<RandomApi></RandomApi>}></Route>
+        <Route path='/other-projects/bitcoin-api' element={<BitcoinApi></BitcoinApi>}></Route>
+        <Route path='/other-projects/boredOther-api/:category' element={<RandomApiOther></RandomApiOther>}></Route>
+        <Route path='/other-projects/boredOther-api' element={<RandomApiOther></RandomApiOther>}></Route>
+        <Route path='/other-projects/genderize-api/:name/:country' element={<GenderizeApi></GenderizeApi>}></Route>
+        <Route path='/other-projects/genderize-api/:name' element={<GenderizeApi></GenderizeApi>}></Route>
+        <Route path='/other-projects/genderize-api' element={<GenderizeApi></GenderizeApi>}></Route>
         <Route path='*' element= {
         <div>
           <h1>404 error. Page not found</h1> 
