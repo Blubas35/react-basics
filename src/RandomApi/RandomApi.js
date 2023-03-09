@@ -24,7 +24,7 @@ const RandomApi = () => {
     const formSubmitHandler = (event) => {
         event.preventDefault()
         console.log(event.target.minPrice.value)
-        const minPrice =  event.target.minPrice.value / 10
+        const minPrice = event.target.minPrice.value / 10
         const maxPrice = event.target.maxPrice.value / 10
         setErrorMsg('')
 
@@ -33,7 +33,7 @@ const RandomApi = () => {
             .then(data => {
                 if (data.error) {
                     setErrorMsg(data.error)
-                } else{
+                } else {
                     setActivity(data.activity)
                     setCategories(data.type)
                     setParticipants(data.participants)
@@ -58,15 +58,12 @@ const RandomApi = () => {
                     setParticipants(data.participants)
                     setActivityPrice(data.price)
                 }
-                
             })
-        
-        }
+    }
 
     const firstLetterUpperCase = word => word[0].toUpperCase() + word.slice(1)
     return (
         <Container>
-            <>
                 <form onSubmit={formSubmitHandler}>
                     <label>What category?</label>
                     <select name='categories'>
@@ -84,8 +81,6 @@ const RandomApi = () => {
                 </form>
                 <button onClick={randomActivityHandler} style={{ width: '20%' }}>I am feeling lucky!</button>
 
-            </>
-
             {errorMsg && errorMsg.length > 0 ? (
                 <div>{errorMsg}</div>
             ) : (
@@ -93,10 +88,12 @@ const RandomApi = () => {
                     <div>Activity to do: {activity}</div>
 
                     {categories && categories.length > 0 && (
-                        <div>Activity type: {firstLetterUpperCase(categories)}</div>
+                        <>
+                            <div>Activity type: {firstLetterUpperCase(categories)}</div>
+                            <div>Participants required: {participants}</div>
+                            <div>Price range: {activityPrice * 10}</div>
+                        </>
                     )}
-                    <div>Participants required: {participants}</div>
-                    <div>Price range: {activityPrice * 10}</div>
                 </div>
 
             )}
